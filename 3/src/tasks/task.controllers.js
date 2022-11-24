@@ -1,5 +1,7 @@
 //? este archivo va a manejar todo lo relacionado a acciones de la base de datos de todos
 
+const Tasks = require('../models/task.model')
+
 const todoDB = []
 //todo
 
@@ -13,8 +15,10 @@ const todoDB = []
 
 let id = 1
 
-const findAllTodos = () => {
+const findAllTodos = async() => {
     // esta funcion debe traer todos los todo´s de mi base de datos
+    const data = await Tasks.findAll()
+    
     return todoDB
 }
 
@@ -24,11 +28,11 @@ const findTodoById = (id) => {
     return todo
 }
 
-const createTodo = (data) => {
-    //esta duncion debe brear un nuevo todo en mi bae de datos y retornar el todo creado
+const createTodo = (obj) => {
+    //esta duncion debe brear un nuevo todo en mi base de datos y retornar el todo creado
     const newTodo = {
         id:id++,
-        title:obj.title,
+        title: obj.title,
         description: obj.description,
         is_completed: false
     }

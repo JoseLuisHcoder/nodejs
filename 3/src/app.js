@@ -1,7 +1,9 @@
 //Dependencias
 const express = require('express')
 
-const taskRouter = require('/tasks/tasks.router')
+const db = require('./utils/database')
+
+const taskRouter = require('./tasks/task.router')
 
 //?initial configs
 const port = 9000
@@ -17,6 +19,13 @@ app.get('/', (req, res) => {
 
 app.use('/', taskRouter)
 
+db.authenticate()
+.then(() => console.log('Database Authenticada correctamente'))
+.catch((err) => console.log(err))
+
+db.sync()
+    .then(() => console.log('Database Sincronizada correctamente'))
+    .catch((err) => console.log(err))
 
 app.listen(port, () => {
     console.log(`Server started at port ${port}`);

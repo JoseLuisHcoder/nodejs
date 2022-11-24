@@ -1,13 +1,19 @@
 // en este archivo vamos a utilizar todo lo relacionado al REQ y RES
-const taskControllers = require('/tasks.controllers')
+const taskControllers = require('./task.controllers')
 
-taskControllers.createTodo()
-taskControllers.findAllTodos()
-taskControllers.findTodoById()
+// taskControllers.createTodo()
+// taskControllers.findAllTodos()
+// taskControllers.findTodoById()
 
 const getAllTodos = (req, res) => {
 const data = taskControllers.findAllTodos()
-    res.status(200).json(data)
+        .then((data) => {
+            res.status(200).json(data)
+        })
+        .catch((err) => {
+            res.status(400).json({message:err.message})
+        })
+    
 }
 
 const getTodoById = (req, res) => {

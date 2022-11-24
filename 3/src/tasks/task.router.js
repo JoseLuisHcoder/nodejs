@@ -8,7 +8,7 @@ const router = require('express').Router()
 const taskServices = require('./task.services')
 
 router.get('/todo', taskServices.getAllTodos)
-router,post('/todo', taskServices.postTodo)
+router.post('/todo', taskServices.postTodo)
 router.get('/todo/:id', taskServices.getTodoById)
 
 

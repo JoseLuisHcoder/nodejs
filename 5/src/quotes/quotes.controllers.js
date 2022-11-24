@@ -24,7 +24,7 @@ const createNewQuote = (obj) => {
         // year: obj.year ? obj.year : 'year unknown'  este dato va ser opcional y esta es l primera manera de estructura
         year: obj.year || 'year unknown'
     }
-    quotesDB.DB.push(newQuote)
+    quotesDB.push(newQuote)
     return newQuote
 }   
 
