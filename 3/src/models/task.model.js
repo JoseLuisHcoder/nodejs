@@ -16,12 +16,12 @@ const Tasks = db.define('tasks', {
         primaryKey: true
     },
     title:{
-        type:DataTypes.STRING,
+        type:DataTypes.STRING, // el string es un varchar con limitacion de 255 caracteres
         allowNull: false, 
         unique:true         // esto se pone para que estos datos sean obligatorios
     },
     description:{
-        type:DataTypes.TEXT,
+        type:DataTypes.TEXT,  // text no tiene limite
         allowNull: false,
     },
     is_completed: {
