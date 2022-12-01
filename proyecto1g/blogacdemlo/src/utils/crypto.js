@@ -13,3 +13,8 @@ const comparePassword = (plainPassword, hashedPassword) => {
 }
 //le pasamos los datos y mostramos en consola
 console.log(comparePassword('Lucianita1*', '$2b$10$t4pvzFAZH9JNvzfokAcq3uDUdiPXnsykddtQiLgodPXKtXBaBpkf2'));
+
+module.exports = {
+    hashPassword,
+    comparePassword
+}

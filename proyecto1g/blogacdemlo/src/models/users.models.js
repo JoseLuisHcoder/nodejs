@@ -1,5 +1,5 @@
 const {DataTypes} = require('sequelize')
-const db = require('../utils/database.')
+const db = require('../utils/database')
 
 const Users = db.define('users', {
     id: {
@@ -47,3 +47,4 @@ const Users = db.define('users', {
     }
 })
 
+module.exports = Users
