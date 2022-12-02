@@ -32,8 +32,19 @@ const createUser = async(obj) => {
     return data
 }
 
+//creamos esta const para el auth.controller.js
+
+const findUserByEmail = async(email) => {
+    const data = await Users.finfOne({
+        where: {
+            email:email
+        }
+    })
+    return data
+}
 module.exports = {
     findAllUsers, 
     findUserById,
-    createUser
+    createUser,
+    findUserByEmail
 }
