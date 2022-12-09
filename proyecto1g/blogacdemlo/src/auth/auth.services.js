@@ -10,7 +10,7 @@ const postLogin = (req, res) => {
 
     if(email && password){
         checkUserCredetntial(email, password)
-        .then(() => {
+        .then((data) => {
             if(data){
                 const token = jwt.sign({
                     id:data.id,
