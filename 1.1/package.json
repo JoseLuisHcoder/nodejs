@@ -4,6 +4,8 @@
   "description": "inicio de proyecto",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
     "test": "node, express"
   },
   "keywords": [
@@ -11,5 +13,11 @@
     "express"
   ],
   "author": "jl",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  }
 }
