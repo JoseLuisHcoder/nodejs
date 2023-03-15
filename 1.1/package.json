@@ -1,0 +1,15 @@
+{
+  "name": "1.1",
+  "version": "1.0.0",
+  "description": "inicio de proyecto",
+  "main": "app.js",
+  "scripts": {
+    "test": "node, express"
+  },
+  "keywords": [
+    "node",
+    "express"
+  ],
+  "author": "jl",
+  "license": "ISC"
+}
