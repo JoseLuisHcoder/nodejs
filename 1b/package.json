@@ -1,18 +1,18 @@
 {
-  "name": "1.1",
+  "name": "jl",
   "version": "1.0.0",
-  "description": "inicio de proyecto",
+  "description": "asdfasdf",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js",
-    "test": "node, express"
+    "start":"node app.js",
+    "dev":"nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "node",
     "express"
   ],
-  "author": "jl",
+  "author": "JL",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2"
