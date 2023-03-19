@@ -1,4 +1,6 @@
 
+const Quotes = require('../models/quotes.models')
+
 const quotesDB = []
 let id = 1
 
